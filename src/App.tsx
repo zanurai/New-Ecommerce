@@ -2,11 +2,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import ProtectedRoute from "@/protected";
 import Cart from "@/pages/cart-item-page/cart";
+import Footer from "@/components/footer/footer";
+import Navbar from "@/components/hearder/navbar";
 import Dashboard from "@/pages/homepage/dashboard";
-
 import ProductList from "@/pages/product-list/product-list";
-import Footer from "./components/footer/footer";
-import Navbar from "./components/hearder/navbar";
+
+
 
 function App() {
   return (

@@ -3,9 +3,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { RootState } from "@/store";
+import { DashboardProps } from "@/types/type";
 import { useAppDispatch, useAppSelector } from "@/hooks";
 import { addProduct, editProduct } from "@/auth/productslice";
-import { DashboardProps } from "@/types/type";
+
 
 const Dashboard: React.FC<DashboardProps> = ({ productToEdit }) => {
   const navigate = useNavigate();

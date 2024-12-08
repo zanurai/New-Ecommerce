@@ -1,11 +1,12 @@
 import React from "react";
 
 import { useNavigate } from "react-router-dom";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 import CartItem from "./cart-item";
 import { useAppDispatch, useAppSelector } from "@/hooks";
 import { removeItemFromCart, updateCartQuantity } from "@/auth/cartslice";
-import { IoMdArrowRoundBack } from "react-icons/io";
+
 
 const Cart: React.FC = () => {
   const navigate = useNavigate();
