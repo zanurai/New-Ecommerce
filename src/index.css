@@ -6,3 +6,7 @@
 .custom-shadow {
   box-shadow: 0 4px 6px rgba(186, 186, 244, 0.6); 
 }
+
+body{
+    /* @apply bg-blue-950 */
+}

@@ -1,50 +1,39 @@
-# React + TypeScript + Vite
+# Documentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech stack
+1. Vite
+2. React.js
+3. Typescript
+4. Tailwind CSS
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Unzip project
+2. Install dependencies `npm install`
+3. Create `.env` file at root path and add
 
-## Expanding the ESLint configuration
+```
+This project is an e-commerce application featuring a dashboard for adding new products and a product list for viewing them. Users can easily input product details, including names and images, which are dynamically displayed in the product list
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+4. Run project with `npm run dev`
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Folder Structure
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. src - The main directory that contains all application code, components, pages.
+2. components - Contains individual, reusable UI components used across different parts of the app.
+3. page - This folder contains the pages of the app that are shown in the browser, like the dashboard, cart-item, cart, product-list.
+4. Redux Toolkit to manage state
+5. auth-
+5. types - Defines data types used across the app for consistency and easier management.
+
+## CSS framework
+
+1. Tailwind CSS - Used for styling the UI quickly and consistently.
+
+## External CSS
+
+1. Index.css - Contains additional custom CSS for specific styles not covered by Tailwind.
+
+App - manages all the routes to navigate between pages in the app.

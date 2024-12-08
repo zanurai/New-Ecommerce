@@ -1,12 +1,7 @@
+import { Product } from "@/types/type";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  vendor: string;
-  image?: string;
-}
+
 
 interface ProductState {
   product: Product[];
@@ -21,7 +16,7 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     addProduct(state, action: PayloadAction<Product>) {
-      console.log("Adding product:", action.payload); // Debugging
+      console.log("Adding product:", action.payload); 
       state.product.push(action.payload);
     },
     editProduct(state, action: PayloadAction<Product>) {
@@ -32,7 +27,7 @@ const productSlice = createSlice({
       }
     },
     removeProduct(state, action: PayloadAction<number>) {
-      console.log("Removing product with id:", action.payload); // Debugging
+      console.log("Removing product with id:", action.payload); 
       state.product = state.product.filter((p) => p.id !== action.payload);
     },
   },

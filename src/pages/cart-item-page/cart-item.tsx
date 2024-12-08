@@ -14,10 +14,8 @@ const CartItem: React.FC<CartItemProps> = ({
   id,
   name,
   price,
-  // quantity,
   image,
   handleRemoveItem,
-  // handleQuantityChange,
 }) => {
   return (
     <div className="flex flex-row space-x-5">
@@ -28,17 +26,12 @@ const CartItem: React.FC<CartItemProps> = ({
             alt={name}
             style={{ width: "150px", height: "150px" }}
           />
-          <span className="text-white">Product name: {name}</span>
-          <span className="text-white">Amount: ${price}</span>
-          {/* <input
-          type="number"
-          value={quantity}
-          min="1"
-          onChange={(e) => handleQuantityChange(id, Number(e.target.value))}
-        /> */}
+          <span className="text-gray-800">Product name: {name}</span>
+          <span className="text-gray-800">Amount: ${price}</span>
+
           <button
             onClick={() => handleRemoveItem(id)}
-            className="border border-white text-white p-1  rounded-lg mt-5"
+            className="border border-white text-gray-800 p-1  rounded-lg mt-5"
           >
             Remove
           </button>
